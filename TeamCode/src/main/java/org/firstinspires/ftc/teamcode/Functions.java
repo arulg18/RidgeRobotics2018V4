@@ -61,8 +61,8 @@ public class Functions extends LinearOpMode{
         motorFL = hardwareMap.dcMotor.get("motorFL_2");
         motorBR = hardwareMap.dcMotor.get("motorBR_1");
         motorBL = hardwareMap.dcMotor.get("motorBL_2");
-        jewelDown = hardwareMap.servo.get("");
-        jewelFlick = hardwareMap.servo.get("");
+        jewelDown = hardwareMap.servo.get("jewelDown_1");
+        jewelFlick = hardwareMap.servo.get("jewelFlick_2");
 
         jewelDown.setDirection(Servo.Direction.FORWARD);//CHECK AND CHOOSE DIRECTION
         jewelFlick.setDirection(Servo.Direction.FORWARD);//CHECK AND CHOOSE DIRECTION
@@ -619,7 +619,14 @@ public class Functions extends LinearOpMode{
         }
 
     }
-
+    public void FlickDown(){
+        jewelDown.setPosition(1);
+        jewelFlick.setPosition(1);
+    };
+    public void FlickUp(){
+        jewelDown.setPosition(0);
+        jewelFlick.setPosition(0);
+    };
 
 
 
